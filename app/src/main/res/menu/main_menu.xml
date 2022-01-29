@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuCartButton"
+        android:title="Cart"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"/>
+    <item android:id="@+id/menuMyListingsButton"
+        android:title="My Listings"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menuSettingButton"
+        android:title="Settings"
+        app:showAsAction="never">
+        <menu>
+            <item android:title="Logout"
+                android:id="@+id/menuLogoutButton"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+</menu>

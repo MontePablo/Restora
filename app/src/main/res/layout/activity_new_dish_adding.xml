@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewDishAdding"
+    android:background="#8E7065"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#a1583e"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/newDishImage"
+            android:layout_width="282dp"
+            android:layout_height="231dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_fastfood_24" />
+
+        <EditText
+            android:id="@+id/newDIshInsertName"
+            android:layout_width="373dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="#d4c07a"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="enter Dish Name(max length 16)"
+            android:inputType="textMultiLine"
+            android:maxLength="16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDIshInsertImage" />
+
+        <EditText
+            android:background="#d4c07a"
+            android:id="@+id/newDishInsertExtra"
+            android:layout_width="375dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="tell something about it in small brief (max length 60)"
+            android:inputType="textMultiLine"
+            android:maxLength="60"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDIshInsertName" />
+
+        <Button
+            android:id="@+id/newDIshInsertImage"
+            android:layout_width="158dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round"
+            android:drawableRight="@drawable/ic_baseline_add_a_photo_24"
+            android:text="insert image"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newDishImage" />
+
+        <TextView
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="79dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingTop="9dp"
+            android:text="set price"
+            app:layout_constraintEnd_toStartOf="@+id/newDishInsertPrice"
+            app:layout_constraintTop_toBottomOf="@+id/newDishInsertExtra" />
+
+        <EditText
+            android:background="#d4c07a"
+            android:id="@+id/newDishInsertPrice"
+            android:layout_width="107dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="in rupees"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newDishInsertExtra" />
+
+        <Button
+            android:id="@+id/newDishPublishButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click here to publish"
+            app:layout_constraintTop_toBottomOf="@+id/newDishInsertPrice"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintLeft_toLeftOf="@id/constraintLayout"
+            app:layout_constraintRight_toRightOf="@id/constraintLayout"
+            tools:layout_editor_absoluteX="80dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

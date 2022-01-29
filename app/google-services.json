@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "289530324134",
+    "project_id": "restora-1c5a4",
+    "storage_bucket": "restora-1c5a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289530324134:android:6ccb73a9dacac250b58067",
+        "android_client_info": {
+          "package_name": "com.example.restora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289530324134-jsrgsm9nfrp3qh37h4o4rrc5jgh8fv7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.restora",
+            "certificate_hash": "90039d5ca2d6155016db5a9115608381c821c9df"
+          }
+        },
+        {
+          "client_id": "289530324134-9kkk10j1hmlrb6730an75kmktdorrjm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdBLJoTtY46fWM7H6c735g-ZkRypXH3SY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289530324134-9kkk10j1hmlrb6730an75kmktdorrjm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
