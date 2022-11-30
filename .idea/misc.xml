@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_address_page.xml" value="0.2" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_home.xml" value="0.11302083333333333" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_new_address.xml" value="0.11302083333333333" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_new_custom_dish.xml" value="0.11302083333333333" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_new_dish_adding.xml" value="0.2" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_sign_in.xml" value="0.16983695652173914" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/activity_splash_screen.xml" value="0.16983695652173914" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/ingredients_images_dynamic_view.xml" value="0.264" />
+        <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/item_dish.xml" value="0.264" />
         <entry key="..\:/Workspace/AndroidStudioProjects/Restora/app/src/main/res/layout/item_leaderboard_item.xml" value="0.18802083333333333" />
         <entry key="..\:/Workspace/AndroidStudioProjects/app/src/main/res/drawable-v24/ic_baseline_add_24.xml" value="0.11041666666666666" />
         <entry key="..\:/Workspace/AndroidStudioProjects/app/src/main/res/drawable-v24/ic_baseline_add_25.xml" value="0.20885416666666667" />

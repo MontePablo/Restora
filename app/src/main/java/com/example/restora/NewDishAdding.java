@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,6 +36,8 @@ public class NewDishAdding extends AppCompatActivity {
     int IMAGE_REQUEST_CODE=7;
     Uri filePathUri;
     DishDao dishDao;
+    private Uri uri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,13 +101,13 @@ public class NewDishAdding extends AppCompatActivity {
         });
     }
 
-//    public void insertImage(){
-//        Intent intent=new Intent();
-//        intent.setType("image/*");
-//        intent.setAction(Intent.ACTION_GET_CONTENT);
-//        //noinspection deprecation
-//        startActivityForResult(Intent.createChooser(intent,"Select Image"),IMAGE_REQUEST_CODE);
-//    }
+    public void insertImage(){
+        Intent intent=new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        //noinspection deprecation
+        startActivityForResult(Intent.createChooser(intent,"Select Image"),IMAGE_REQUEST_CODE);
+    }
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
@@ -120,17 +123,17 @@ public class NewDishAdding extends AppCompatActivity {
 //            Log.d("TAG","onActivityResult data==null");
 //        }
 //    }
-    public void insertImage(){
-        CropImage.startPickImageActivity(NewDishAdding.this);
-    }
+//    public void insertImage(){
+//        CropImage.startPickImageActivity(NewDishAdding.this);
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             Uri imageUri = CropImage.getPickImageResultUri(this, data);
             if (CropImage.isReadExternalStoragePermissionsRequired(this, imageUri)) {
-//                uri=imageUri;
+                uri=imageUri;
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 0);
             } else {
                 startCrop(imageUri);
@@ -142,6 +145,18 @@ public class NewDishAdding extends AppCompatActivity {
                 newDishImageView.setImageURI(result.getUri());
                 filePathUri=result.getUri();
                 Log.d("TAG", "image uri set to imageView");
+            }else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Log.d("error",result.getError().toString());
+            }
+        }
+    }
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if (requestCode == CropImage.PICK_IMAGE_PERMISSIONS_REQUEST_CODE) {
+            if (uri != null && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // required permissions granted, start crop image activity
+                startCrop(uri);
+            } else {
+                Toast.makeText(this, "Cancelling, required permissions are not granted", Toast.LENGTH_LONG).show();
             }
         }
     }

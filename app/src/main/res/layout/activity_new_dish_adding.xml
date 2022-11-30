@@ -9,6 +9,7 @@
     android:padding="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="10dp"
         android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,8 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#a1583e"
-        android:padding="20dp">
+        android:background="#a1583e">
 
         <ImageView
             android:id="@+id/newDishImage"
@@ -30,7 +30,7 @@
 
         <EditText
             android:id="@+id/newDIshInsertName"
-            android:layout_width="373dp"
+            android:layout_width="330dp"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
             android:background="#d4c07a"
@@ -46,7 +46,7 @@
         <EditText
             android:background="#d4c07a"
             android:id="@+id/newDishInsertExtra"
-            android:layout_width="375dp"
+            android:layout_width="330dp"
             android:layout_height="106dp"
             android:layout_marginTop="28dp"
             android:ems="10"
@@ -58,6 +58,7 @@
             app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/newDIshInsertName" />
+
 
         <Button
             android:id="@+id/newDIshInsertImage"

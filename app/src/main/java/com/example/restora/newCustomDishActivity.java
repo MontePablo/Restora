@@ -39,6 +39,7 @@ import models.CustomDish;
 import models.User;
 
 public class newCustomDishActivity extends AppCompatActivity {
+    private static final int IMAGE_REQUEST_CODE = 7;
     LinearLayout ingredientAddConstrantLayout;
     LinearLayout ingredientImageAddConstrantLayout;
     Button ingredientViewAddButton;
@@ -155,11 +156,12 @@ public class newCustomDishActivity extends AppCompatActivity {
     public void addImage(){
         final View view=getLayoutInflater().inflate(R.layout.ingredients_images_dynamic_view,null,false);
         ImageView ingredientDynamicImageView=view.findViewById(R.id.ingredientDynamicImageView);
+        imageView=ingredientDynamicImageView;
         Button ingredientDynamicImageAdd=view.findViewById(R.id.ingredientDynamicImageAdd);
         ingredientDynamicImageAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertImage(ingredientDynamicImageView);
+                insertImage();
 
 
             }
@@ -177,17 +179,23 @@ public class newCustomDishActivity extends AppCompatActivity {
     public void removeIngredientImage(View view){
         ingredientImageAddConstrantLayout.removeView(view);
     }
-
-    public void insertImage(ImageView imageView){
-        CropImage.startPickImageActivity(newCustomDishActivity.this);
-        this.imageView=imageView;
-
+    public void insertImage(){
+        Intent intent=new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        //noinspection deprecation
+        startActivityForResult(Intent.createChooser(intent,"Select Image"),IMAGE_REQUEST_CODE);
     }
+//    public void insertImage(ImageView imageView){
+//        CropImage.startPickImageActivity(newCustomDishActivity.this);
+//        this.imageView=imageView;
+//
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             Uri imageUri = CropImage.getPickImageResultUri(this, data);
             if (CropImage.isReadExternalStoragePermissionsRequired(this, imageUri)) {
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 0);
