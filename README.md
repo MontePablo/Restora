@@ -34,10 +34,15 @@
 
 ## Video clips ::
   # login               # Selling
+  ![login](https://user-images.githubusercontent.com/95046456/205850243-8629cb9d-8c0a-4d64-b1a4-25c831aa013e.gif)
+![selling](https://user-images.githubusercontent.com/95046456/205850278-9432e1b1-2689-43a4-8903-4f18f03d34ce.gif)
+
   
+  # Buying              # Custom Dish
+  ![buying](https://user-images.githubusercontent.com/95046456/205850330-fd69e281-2660-43a5-af1f-6727edbc9d39.gif)
+![CustomDish](https://user-images.githubusercontent.com/95046456/205850375-df8c06a4-eb88-46f7-a52b-56be06095aab.gif)
+
   
-  #Buying              # Custom Dish
-  
-  
-  # Rankings based on likes
-  
+  # Rankings based on likes on your Custom Recipe
+  ![ratingPerWeek](https://user-images.githubusercontent.com/95046456/205850433-af0848a5-5330-4fdd-869d-1349b93eec4c.gif)
+
