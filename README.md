@@ -32,4 +32,12 @@
 ![ranking](https://user-images.githubusercontent.com/95046456/205586854-593e8333-0fba-4037-a0c8-0407e7ecc2d8.PNG)
 ![ranking2](https://user-images.githubusercontent.com/95046456/205586861-dff3f81e-d1af-4901-854d-92d6f034c044.PNG)
 
-## Video clip ::
+## Video clips ::
+  # login               # Selling
+  
+  
+  #Buying              # Custom Dish
+  
+  
+  # Rankings based on likes
+  
